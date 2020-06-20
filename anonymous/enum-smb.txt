@@ -1,0 +1,36 @@
+# Nmap 7.80 scan initiated Thu May 21 19:49:56 2020 as: nmap --script /usr/share/nmap/scripts/smb-enum-shares.nse -oN enum-smb.txt -p 139 10.10.34.157
+Nmap scan report for 10.10.34.157
+Host is up (0.075s latency).
+
+PORT    STATE SERVICE
+139/tcp open  netbios-ssn
+
+Host script results:
+| smb-enum-shares: 
+|   account_used: guest
+|   \\10.10.34.157\IPC$: 
+|     Type: STYPE_IPC_HIDDEN
+|     Comment: IPC Service (anonymous server (Samba, Ubuntu))
+|     Users: 1
+|     Max Users: <unlimited>
+|     Path: C:\tmp
+|     Anonymous access: READ/WRITE
+|     Current user access: READ/WRITE
+|   \\10.10.34.157\pics: 
+|     Type: STYPE_DISKTREE
+|     Comment: My SMB Share Directory for Pics
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\home\namelessone\pics
+|     Anonymous access: READ
+|     Current user access: READ
+|   \\10.10.34.157\print$: 
+|     Type: STYPE_DISKTREE
+|     Comment: Printer Drivers
+|     Users: 0
+|     Max Users: <unlimited>
+|     Path: C:\var\lib\samba\printers
+|     Anonymous access: <none>
+|_    Current user access: <none>
+
+# Nmap done at Thu May 21 19:50:10 2020 -- 1 IP address (1 host up) scanned in 13.62 seconds
