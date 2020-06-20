@@ -1,0 +1,3 @@
+execute -H -f cmd.exe -a "/c sc config termservice start= disabled"
+execute -H -f cmd.exe -a "/c sc stop termservice"
+execute -H -f cmd.exe -a "/c 'netsh firewall set service type = remotedesktop mode = enable'"
