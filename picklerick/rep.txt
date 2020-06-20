@@ -1,0 +1,16 @@
+````
+export IP=10.10.129.36
+````
+````
+R1ckRul3s:Wubbalubbadubdub
+
+````
+What is the first ingredient Rick needs?
+mr. meeseek hair
+
+What is the second ingredient Rick needs?
+1 jerry tear
+
+What is the third ingredient Rick needs?
+fleeb juice
+
