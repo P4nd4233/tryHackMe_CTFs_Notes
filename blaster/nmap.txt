@@ -1,0 +1,27 @@
+# Nmap 7.80 scan initiated Thu Jun 25 13:23:06 2020 as: nmap -sC -sV -Pn -oN nmap.txt 10.10.99.228
+Nmap scan report for 10.10.99.228
+Host is up (0.080s latency).
+Not shown: 998 filtered ports
+PORT     STATE SERVICE       VERSION
+80/tcp   open  http          Microsoft IIS httpd 10.0
+| http-methods: 
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: IIS Windows Server
+3389/tcp open  ms-wbt-server Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: RETROWEB
+|   NetBIOS_Domain_Name: RETROWEB
+|   NetBIOS_Computer_Name: RETROWEB
+|   DNS_Domain_Name: RetroWeb
+|   DNS_Computer_Name: RetroWeb
+|   Product_Version: 10.0.14393
+|_  System_Time: 2020-06-25T10:23:22+00:00
+| ssl-cert: Subject: commonName=RetroWeb
+| Not valid before: 2020-05-21T21:44:38
+|_Not valid after:  2020-11-20T21:44:38
+|_ssl-date: 2020-06-25T10:23:23+00:00; +1s from scanner time.
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Jun 25 13:23:22 2020 -- 1 IP address (1 host up) scanned in 16.44 seconds
